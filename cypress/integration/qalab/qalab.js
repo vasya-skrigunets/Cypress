@@ -1,4 +1,4 @@
-describe('example to-do app', () => {
+describe('QAlab TIVIX', () => {
     beforeEach(() => {
         cy.visit('http://qalab.pl.tivixlabs.com/')
     })
