@@ -1,10 +1,9 @@
 describe('example to-do app', () => {
     beforeEach(() => {
-        
+        cy.visit('http://qalab.pl.tivixlabs.com/')
     })
 
     it('Sucsessfuly serching on  selected days', () =>{
-        cy.visit('http://qalab.pl.tivixlabs.com/')
         cy.get('#country').select('Germainy')
         cy.get('#country').should('have.value', '2')
 
@@ -23,7 +22,6 @@ describe('example to-do app', () => {
     })
 
     it('Unsuccessfully searching with invalid data', () =>{
-        cy.visit('http://qalab.pl.tivixlabs.com/')
         cy.get('#country').select('Germainy')
         cy.get('#country').should('have.value', '2')
 
@@ -43,7 +41,6 @@ describe('example to-do app', () => {
     })
 
     it.only('Unsuccessfully searching with invalid data', () =>{
-        cy.visit('http://qalab.pl.tivixlabs.com')
         cy.get('#country').select('Germainy')
         cy.get('#country').should('have.value', '2')
 
