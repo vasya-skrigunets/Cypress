@@ -40,7 +40,7 @@ describe('QAlab TIVIX', () => {
         cy.get('.alert').should('have.text', 'Please enter a valid date!')
     })
 
-    it.only('Unsuccessfully searching with invalid data', () =>{
+    it('Unsuccessfully searching with invalid data', () =>{
         cy.get('#country').select('Germainy')
         cy.get('#country').should('have.value', '2')
 
